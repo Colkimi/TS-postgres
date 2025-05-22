@@ -72,3 +72,4 @@ export const excepttwo = async():Promise<string[]>=>{
     throw error
 }
 }
+

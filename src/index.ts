@@ -6,7 +6,9 @@ import { nullifExample, caseExample, coalesceExample, castExample } from './exam
 import {getSalesByGroupingSets, getSalesByRollup, getSalesByCube} from './examples/aggregationQueries';
 import {getProductsAboveAveragePrice,getTopSellingProducts,getProductDetails} from './examples/cte';
 import  {union,unionAll,intersect,except,excepttwo}  from    './examples/setoperations';
+import  {copyingTables,addColumn,alterColumn,renameColumn,renametable,truncatetable,droptable}  from    './examples/managingtables';
 import  {performTransactionalModifications}  from    './examples/restoreAndModify';
+
 // Self-executing async function to run the imported code
 (async () => {
     try {
@@ -82,6 +84,28 @@ import  {performTransactionalModifications}  from    './examples/restoreAndModif
 
         const resultExcepttwo=await excepttwo();
         console.log('Except Inverse Result:', resultExcepttwo)
+
+        //Managing tables
+        console.log('Copying table result:');
+        console.table(await copyingTables());
+
+        console.log('Add column result:');
+        console.table(await addColumn());
+
+        console.log('Rename column result:');
+        console.table(await renameColumn());
+
+        console.log('Alter column result:');
+        console.table(await alterColumn());
+
+        console.log('Rename table result:');
+        console.table(await renametable());
+
+        console.log('Truncate table result:');
+        console.table(await truncatetable());
+
+        console.log('Drop table result:');
+        console.log(await droptable());
 
         console.log('All operations completed successfully');
     } catch (error) {

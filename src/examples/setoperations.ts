@@ -36,7 +36,7 @@ export const intersect = async():Promise<string[]>=>{
     const result=await  executeQuery(`
             SELECT orders.customer_name FROM orders
             INTERSECT
-            SELECT customers.customer_namee FROM customers;
+            SELECT customers.customer_name FROM customers;
     `);
     return result.rows;
 }catch(error){

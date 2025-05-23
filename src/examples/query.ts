@@ -10,7 +10,7 @@ export interface TProduct {
 
 export interface TOrder {
   order_id?: number;
-  product_id: number;
+  product_id?: number;
   quantity_ordered: number;
   customer_name: string;
   order_date?: Date;

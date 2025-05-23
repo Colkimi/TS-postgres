@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/index.ts",
     "dev1": "tsx watch src/examples/joins.ts",
+    "dev2": "tsx watch src/examples/subquery.ts",
+    "dev3": "tsx watch src/examples/cte.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },

@@ -9,7 +9,7 @@ import  {union,unionAll,intersect,except,excepttwo}  from    './examples/setoper
 import  {copyingTables,addColumn,alterColumn,renameColumn,renametable,truncatetable,droptable}  from    './examples/managingtables';
 import  {performTransactionalModifications}  from    './examples/restoreAndModify';
 
-// Self-executing async function to run the imported code
+// Self-executing async function to run the imported codes
 (async () => {
     try {
         // 1. Create tables if they don't exist
